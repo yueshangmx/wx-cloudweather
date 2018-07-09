@@ -1,0 +1,36 @@
+/* pages/details/details.wxss */
+.details{
+  padding: 12rpx 25rpx;
+  font-size: 28rpx;
+  position: absolute;
+  height: 98%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 22;
+}
+.details .info{
+  background-color: rgba(176,196,222,.4);
+  padding: 0 10rpx;
+  border-radius: 10rpx;
+}
+.details view {
+  padding: 10px 0;
+  text-align: justify;
+}
+.brf{
+  color: #eee;
+}
+.mark{
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1
+}
+.mark-img{
+  width: 100%;
+  height: 100%;
+  filter: blur(5rpx);
+}

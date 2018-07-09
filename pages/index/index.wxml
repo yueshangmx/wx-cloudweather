@@ -1,0 +1,67 @@
+<!--index.wxml-->
+<wxs module='filter' src='index.wxs'></wxs>
+<view class="container">
+  <!-- 显示当天天气情况 -->
+  <view class='info'  wx:if="{{weather.tmp}}">
+    <!-- 城市 -->
+    <view class='area'>
+      <text class='city'>{{location.city}}</text>
+      <text class='district'>{{'('+location.district+')'}}</text>
+      <text class='time'>(本地{{refreshtime}}更新)</text>
+    </view>
+    <view class='today'>
+      <!-- 温度 -->
+      <view class='temp'>
+        <image class='icon' src='{{weather_icon}}'></image>
+        <view class='temp_info'>
+          <text class='des'>{{weather.cond_txt}} {{weather.tmp+'℃'}}</text>
+          <text class='air'>{{'体感：'+weather.fl+'℃'+' | 空气湿度：'+weather.hum+'%'}}</text>
+          <text class='air'>{{'PM2.5：'+air.pm25+' | 空气质量：'+air.qlty}}</text>
+        </view>
+      </view>
+      <!-- 生活指数 -->
+      <view class='lifestyle'>
+        <text class='tips'>温馨提示：</text>{{lifestyle[0].txt}}
+        <text bindtap='showDetails' class='detail'>详情...</text>
+      </view>
+    </view>
+    <!--24小时预报-->
+    <view class='hourly'>
+      <view class='hourly-detail' wx:for="{{hourly}}" wx:key="index">
+        <view class='hour-time'>{{filter.formatTime(item.time)}}</view>
+        <view class='hour-temp'>{{item.tmp}}℃</view>
+        <view class='hour-weather'>
+          <image class='hourly-icon' src='{{filter.getIco(item.cond_code)}}'></image>
+          <text>{{item.cond_txt}}</text>
+        </view>
+      </view>
+    </view>
+    <!--未来7天预报-->
+    <view class='forecast'>
+      <view class='yubao' wx:for="{{forecast}}" wx:key="index">
+        <text class='f1 f-time' wx:if="{{index==0}}">{{index==0?'今天':filter.formatTime(item.date)}}</text>
+        <text class='f1 f-time' wx:elif="{{index==1}}">{{index==1?'明天':filter.formatTime(item.date)}}</text>
+        <text class='f1 f-time' wx:elif="{{index==2}}">{{index==2?'后天':filter.formatTime(item.date)}}</text>
+        <text class='f1 f-time' wx:else>{{filter.formatTime(item.date)}}</text>
+        <text class='f1'>{{filter.getWeek(item.date)}}</text>
+        <view class='f1 f-weather'>
+          <image mode='aspectFit' class='f-icon' src="{{filter.getIco(item.cond_code_d)}}"></image>
+          <text>{{item.cond_txt_d}}</text>
+        </view>
+        <view class='f1 f-wind'>
+          <text class='f-wind-dir'>{{item.wind_dir}}</text>
+          <text>{{item.wind_sc+'级'}}</text>
+        </view>
+        <view class='f1 f-temp'>
+          <text>{{item.tmp_min+'-'+item.tmp_max+'℃'}}</text>
+          <text>{{'湿度：'+item.hum+'%'}}</text>
+        </view>
+      </view>
+    </view>
+    <!-- 数据来源 -->
+    <view class='source'>--数据来源：和风天气</view>
+  </view>
+  <view class='mark'>
+    <image class='mark-img' src='{{ImgUrl}}'></image>
+  </view>
+</view>

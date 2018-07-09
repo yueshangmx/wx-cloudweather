@@ -1,0 +1,16 @@
+<!--pages/details/details.wxml-->
+<view class='details'>
+  <view class='info'>
+    <view><text class='brf'>舒适度指数：</text><text>{{lifestyle[0].txt}}</text></view>
+    <view><text class='brf'>穿衣指数：</text><text>{{lifestyle[1].txt}}</text></view>
+    <view><text class='brf'>感冒指数：</text><text>{{lifestyle[2].txt}}</text></view>
+    <view><text class='brf'>运动指数：</text><text>{{lifestyle[3].txt}}</text></view>
+    <view><text class='brf'>旅游指数：</text><text>{{lifestyle[4].txt}}</text></view>
+    <view><text class='brf'>紫外线指数：</text><text>{{lifestyle[5].txt}}</text></view>
+    <view><text class='brf'>洗车指数：</text><text>{{lifestyle[6].txt}}</text></view>
+    <view><text class='brf'>舒空气污染指数：</text><text>{{lifestyle[7].txt}}</text></view>
+  </view>
+</view>
+<view class='mark'>
+  <image class='mark-img' src='{{ImgUrl}}'></image>
+</view>

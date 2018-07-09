@@ -1,0 +1,169 @@
+/**index.wxss**/
+page{
+  border-radius: 5rpx;
+}
+.container{
+  width: 100%;
+  background-color: rgba(238,238,238,.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: '微软雅黑','宋体';
+  box-sizing: border-box;
+  font-size: 32rpx;
+  padding:0 20rpx 20rpx 20rpx;
+}
+.info{
+  z-index: 2;
+  margin-top:20rpx; 
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.area{
+  width: 100%;
+  padding-left: 40rpx;
+}
+.district{
+  font-size: 24rpx;
+}
+.time{
+  margin-left: 20rpx;
+  color: #333;
+  font-size: 24rpx;
+  background-color: rgba(238,238,238,.3);
+  border-radius: 20rpx;
+}
+.today{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(238,238,238,.3);
+  border-radius: 20rpx;
+  margin-top: 10rpx;
+}
+.temp{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 200rpx;
+  margin: 40rpx 0;
+  font-size: 60rpx;
+}
+.icon{
+  width: 200rpx;
+  height: 200rpx; 
+}
+.temp_info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;  
+}
+.air{
+  font-size: 24rpx;
+  color:#333;
+}
+.lifestyle{
+  padding: 10rpx 20rpx;
+  font-size: 24rpx;
+  color: #333;
+}
+.tips{
+  color: #555;
+}
+.detail{
+  color: blue;
+}
+.hourly {
+  width: 100%;
+  margin-top: 20rpx;
+  padding: 10rpx 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px solid #999;
+  background-color: rgba(238,238,238,.4);
+  border-radius: 10rpx;
+}
+.hourly-detail{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 24rpx;
+}
+.hour-weather{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.hourly-icon{
+  width: 50rpx;
+  height: 50rpx;
+}
+.hour-temp{
+  padding: 10rpx 0;
+}
+.forecast{
+  margin: 20rpx 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 26rpx;
+}
+.yubao{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  border: 1px solid #999;
+  background-color: rgba(238,238,238,.4);
+  border-radius: 10rpx;
+  margin: 5rpx 0;
+}
+.f1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10rpx 0;
+}
+.f-weather{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.f-icon{
+  width: 50rpx;
+  height: 50rpx;
+}
+.f-wind-dir{
+  padding-bottom: 5rpx;
+}
+
+
+.source{
+  font-size: 20rpx;
+  color: #555;
+  bottom: 2rpx;
+}
+.mark{
+  display: block;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 0
+}
+.mark-img{
+  width: 100%;
+  height: 100%;
+  filter: blur(5rpx);
+}
